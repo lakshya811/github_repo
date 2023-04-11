@@ -1,8 +1,8 @@
-class RedHeadDuck extends Duck {
-    public RedHeadDuck(){
+class MallardDuck extends Duck {
+
+    public MallardDuck(){
         quackbehaviour =new Quack();
         flybehaviour =new FlyWithWings();
-
     }
 
     @Override

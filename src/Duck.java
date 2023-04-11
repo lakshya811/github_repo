@@ -1,15 +1,32 @@
-abstract class Duck {
+public abstract class Duck {
+    FlyBehaviour flybehaviour; // object of interfaces
+    quackBehaviour quackbehaviour;
 
-    Flybehaviour flybehaviour; // object of interfaces
-    quackbehaviour quackbehaviour;
-    public String quack() {
-        return "Quack!";
+    swimBehaviour swimbehaviour;
+    abstract void display();
+
+    public void setFlyBehavior(FlyBehaviour fb) {
+        flybehaviour = fb;
     }
 
-    public String fly() {
-        return "Swim!";
+    public void setquackBehavior(quackBehaviour qb) {
+        quackbehaviour=qb;
     }
 
-    abstract public String display();
+    public void setswimBehavior(swimBehaviour sb) {
+        swimbehaviour=sb;
+    }
 
-    public void
+    public void performQuack()
+    {
+        quackbehaviour.quack();
+    }
+    public void performFly()
+    {
+        flybehaviour.Fly();
+    }
+    public void performSwim()
+    {
+        swimbehaviour.swim();
+    }
+}
