@@ -11,3 +11,5 @@ abstract class Duck {
     }
 
     abstract public String display();
+
+    public void
